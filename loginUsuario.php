@@ -6,6 +6,7 @@
  * codigo de error 3 usuario no encontrado
  */
 session_start();
+echo $_SESSION['errorCode'];
 
 $email = $_REQUEST['correo'];
 $contrasenia = $_REQUEST['contrasena'];
@@ -23,6 +24,7 @@ if($registro = mysqli_fetch_array($seleccion)) {
     if ($contrasenia===$registro['contrasena']) {
         echo "todo en orden";
         $_SESSION['usuarioRegistrado']=$registro['nombreUsuario'];
+        $_SESSION['errorCode']=0;
         header("location: ../index.php");
     }else{
         echo "no coinciden las contras";

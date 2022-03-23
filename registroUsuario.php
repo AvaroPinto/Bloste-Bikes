@@ -12,6 +12,7 @@ $user=$_REQUEST['nombreUsuario'];
 $email=$_REQUEST['emailUsuario'];
 $contrasena=$_REQUEST['contrasenaUsuario'];
 $repetida=$_REQUEST['contrasenaRepetida'];
+$telefono=$_REQUEST['telUsuario'];
 
 
 //cosas de la BBDD
@@ -37,7 +38,7 @@ if($registro = mysqli_fetch_assoc($seleccion)) {
     if ($contrasena===$repetida) {
         //echo "<h1>Usuario registrado correctamente.</h1>";
         $_SESSION['usuarioRegistrado']=$user;
-        mysqli_query($conexion, "INSERT INTO usuarios (nombreUsuario, correo, contrasena) VALUES ('$user', '$email', '$contrasena')");
+        mysqli_query($conexion, "INSERT INTO usuarios (nombreUsuario, correo, contrasena,telefono) VALUES ('$user', '$email', '$contrasena', '$telefono')");
         header("location: ../index.php");
     }else{
         //echo "<h1>Parece que las contraseñas no coinciden. Prueba de nuevo.</h1>";

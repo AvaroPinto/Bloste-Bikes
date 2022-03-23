@@ -1,5 +1,6 @@
 <?php
   session_start();
+  $_SESSION['errorCode']=0;
 ?>
 
 <!DOCTYPE html>
@@ -17,12 +18,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
-<div class="container"  style="width: 70%;">
+<?php echo "<p style='color: white;'>p</p>";  ?>
+<div class="container" style="width: 70%;">
     <header>
       <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
   <!-- Container wrapper -->
-  <div class="container">
+        <div class="container">
     <!-- Navbar brand -->
     <a class="navbar-brand me-2" href="./index.php">
       <img
@@ -92,8 +94,10 @@
   </div>
   <!-- Container wrapper -->
 </nav>
+</header>
 <!-- Navbar -->
-      </header>
+
+<!-- Carousel de fotos -->
       <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -132,51 +136,44 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
+  <!-- Carousel de fotos -->
+
+  <!-- Tarjetas de iformacion -->
 
 <section class="light">
 	<div class="container py-2">
-		<div class="h1 text-center text-dark" id="pageHeaderTitle">My Cards Light</div>
+		<div class="h1 text-center text-dark" id="pageHeaderTitle">Para los expertos de verdad</div>
 
 		<article class="postcard light green">
-			<a class="postcard__img_link" href="#">
+			<a class="postcard__img_link" href="./vistas/vistaBicis.php">
 				<img class="postcard__img" src="./images/imgLogin.jpeg" alt="Image Title" />
 			</a>
 			<div class="postcard__text t-dark">
-				<h1 class="postcard__title green"><a href="#">Podcast Title</a></h1>
-				<div class="postcard__subtitle small">
-					<time datetime="2020-05-25 12:00:00">
-						<i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
-					</time>
-				</div>
+				<h1 class="postcard__title green"><a href="./vistas/vistaBicis.php">XC y DownHill</a></h1>
 				<div class="postcard__bar"></div>
-				<div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
+				<div class="postcard__preview-txt">Nuestras bicicletas de cross-country son de alta tecnología para el touring, el entrenamiento y la competición. Si tu apodo es la eficiencia y si flipas por la velocidad. Nuestras bicis de gravity no tienen miedo de nada ni de nadie. Las líneas tremendas de descenso así que los saltos gordos son su hábitat natural. Entonces has hecho bien en venir si te gustan los recorridos rápidos y sucios!</div>
 				<ul class="postcard__tagbox">
-					<li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
-					<li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+					<li class="tag__item"><i class="fas fa-tag mr-2"></i>Descenso</li>
+					<li class="tag__item"><i class="fas fa-clock mr-2"></i>Salidas largas</li>
 					<li class="tag__item play green">
-						<a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+						<a href="./vistas/vistaBicis.php"><i class="fas fa-play mr-2"></i>Pruebalas</a>
 					</li>
 				</ul>
 			</div>
 		</article>
 		<article class="postcard light yellow">
-			<a class="postcard__img_link" href="#">
+			<a class="postcard__img_link" href="./vistas/vistaBicis.php">
 				<img class="postcard__img" src="./images/ciclistis.jpeg" alt="Image Title" />
 			</a>
 			<div class="postcard__text t-dark">
-				<h1 class="postcard__title yellow"><a href="#">Podcast Title</a></h1>
-				<div class="postcard__subtitle small">
-					<time datetime="2020-05-25 12:00:00">
-						<i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
-					</time>
-				</div>
+				<h1 class="postcard__title yellow"><a href="./vistas/vistaBicis.php">Road Bike y Gravel</a></h1>
 				<div class="postcard__bar"></div>
-				<div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
+				<div class="postcard__preview-txt">La bicicleta de grava se siente muy bien en lugares donde la bicicleta de carretera clásica tiene problemas. Te ofrece la suavidad de marcha y la seguridad necesarias en todoterreno, lo que lo convierte en el proyectil ideal para cualquiera que quiera tener flexibilidad en su elección de rutas y dejar atrás las calles. Tambien tenemos bicis de carretera para la experiencia reina del ciclismo.</div>
 				<ul class="postcard__tagbox">
-					<li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
-					<li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+					<li class="tag__item"><i class="fas fa-tag mr-2"></i>Llaneo</li>
+					<li class="tag__item"><i class="fas fa-clock mr-2"></i>Maratón y larga Distancia</li>
 					<li class="tag__item play yellow">
-						<a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+						<a href="./vistas/vistaBicis.php"><i class="fas fa-play mr-2"></i>Pruebalas</a>
 					</li>
 				</ul>
 			</div>
@@ -184,139 +181,141 @@
 	</div>
 </section>
 
+<!-- Tarjetas de iformacion -->
+
+<!-- Acceso to wapos -->
+
 <div>
-
-
-<h1>Tickets cards</h1>
 <ul class="d-flex justify-content-center">
   <li class="booking-card" style="background-image: url(./images/bujes.png)">
     <div class="book-container">
       <div class="content">
-        <button class="btn">Réserver</button>
+        <button class="btn"><a href="./vistas/vistaProductos.php" class="text-white">Comprar</a></button>
       </div>
     </div>
     <div class="informations-container">
-      <h2 class="title">Je suis un billet pour aller visiter un truc</h2>
-      <p class="sub-title">Et moi un je suis sous-titre</p>
+      <h2 class="title">Las mejores ruedas y bujes</h2>
+      <p class="sub-title">Marcas de calidad</p>
       <p class="price"><svg class="icon" style="width:24px;height:24px" viewBox="0 0 24 24">
     <path fill="currentColor" d="M3,6H21V18H3V6M12,9A3,3 0 0,1 15,12A3,3 0 0,1 12,15A3,3 0 0,1 9,12A3,3 0 0,1 12,9M7,8A2,2 0 0,1 5,10V14A2,2 0 0,1 7,16H17A2,2 0 0,1 19,14V10A2,2 0 0,1 17,8H7Z" />
-</svg>De 0 à 15 €</p>
+</svg>Desde 49,99 €</p>
       <div class="more-information">
         <div class="info-and-date-container">
           <div class="box info">
             <svg class="icon" style="width:24px;height:24px" viewBox="0 0 24 24">
       <path fill="currentColor" d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z" />
   </svg>
-            <p>Parc des expositions à NANTES</p>
+            <p>Componentes con 2 años de garantía</p>
           </div>
           <div class="box date">
             <svg class="icon" style="width:24px;height:24px" viewBox="0 0 24 24">
       <path fill="currentColor" d="M19,19H5V8H19M16,1V3H8V1H6V3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3H18V1M17,12H12V17H17V12Z" />
   </svg>
-            <p>Samedi 1er février 2020</p>
+            <p>Temporada 2022/2023</p>
           </div>
         </div>
-        <p class="disclaimer">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi eveniet perferendis culpa. Expedita architecto nesciunt, rem distinctio</p>
+        <p class="disclaimer">Aquí podemos encontrar un buen EasterEgg en el cual no os enseño mucho de información pero aprovecho para deciros que Os quiero!</p>
         </div>
     </div>
   </li>
   <li class="booking-card" style="background-image: url(./images/bizzis.png);">
     <div class="book-container">
       <div class="content">
-        <button class="btn">Réserver</button>
+        <button class="btn"><a href="./vistas/vistaProductos.php" class="text-white">Comprar</a></button>
       </div>
     </div>
     <div class="informations-container">
-      <h2 class="title">Je suis moi aussi un billet</h2>
-      <p class="sub-title">Et moi je suis un 2ème sous-titre</p>
+      <h2 class="title">Equípate con la mejor ropa</h2>
+      <p class="sub-title">Gobik, Castelli y Sportful</p>
       <p class="price"><svg class="icon" style="width:24px;height:24px" viewBox="0 0 24 24">
     <path fill="currentColor" d="M3,6H21V18H3V6M12,9A3,3 0 0,1 15,12A3,3 0 0,1 12,15A3,3 0 0,1 9,12A3,3 0 0,1 12,9M7,8A2,2 0 0,1 5,10V14A2,2 0 0,1 7,16H17A2,2 0 0,1 19,14V10A2,2 0 0,1 17,8H7Z" />
-</svg>De 0 à 35 €</p>
+</svg>Desde 39,99 €</p>
       <div class="more-information">
         <div class="info-and-date-container">
           <div class="box info">
             <svg class="icon" style="width:24px;height:24px" viewBox="0 0 24 24">
       <path fill="currentColor" d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z" />
   </svg>
-            <p>Parlement de Bretagne à RENNES</p>
+            <p>Ropa con 2 años de garantía</p>
           </div>
           <div class="box date">
             <svg class="icon" style="width:24px;height:24px" viewBox="0 0 24 24">
       <path fill="currentColor" d="M19,19H5V8H19M16,1V3H8V1H6V3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3H18V1M17,12H12V17H17V12Z" />
   </svg>
-            <p>À partir du Dimanche 3 Juin 2020</p>
+            <p>Temporada 2022/2023</p>
           </div>
         </div>
-        <p class="disclaimer">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi eveniet perferendis culpa. Expedita architecto nesciunt, rem distinctio</p>
+        <p class="disclaimer">Es muy importante llevar una equipación adecuada dependiendo de la disciplina que desarrollemos en la bicicleta. Siempre está bien ir bien abrigado.</p>
         </div>
     </div>
   </li>
   <li class="booking-card" style="background-image: url(./images/guantes.png);">
     <div class="book-container">
       <div class="content">
-        <button class="btn">Réserver</button>
+        <button class="btn"><a href="./vistas/vistaProductos.php" class="text-white">Comprar</a></button>
       </div>
     </div>
     <div class="informations-container">
-      <h2 class="title">Encore un billet</h2>
-      <p class="sub-title">Encore un sous-titre</p>
+      <h2 class="title">Guantes de protección</h2>
+      <p class="sub-title">Verano, invierno, siempre protegido</p>
       <p class="price"><svg class="icon" style="width:24px;height:24px" viewBox="0 0 24 24">
     <path fill="currentColor" d="M3,6H21V18H3V6M12,9A3,3 0 0,1 15,12A3,3 0 0,1 12,15A3,3 0 0,1 9,12A3,3 0 0,1 12,9M7,8A2,2 0 0,1 5,10V14A2,2 0 0,1 7,16H17A2,2 0 0,1 19,14V10A2,2 0 0,1 17,8H7Z" />
-</svg>20 €</p>
+</svg>Desde 19,99 €</p>
       <div class="more-information">
         <div class="info-and-date-container">
           <div class="box info">
             <svg class="icon" style="width:24px;height:24px" viewBox="0 0 24 24">
       <path fill="currentColor" d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z" />
   </svg>
-            <p>Le Trident à CHERBOURG</p>
+            <p>Garantía de 1 año</p>
           </div>
           <div class="box date">
             <svg class="icon" style="width:24px;height:24px" viewBox="0 0 24 24">
       <path fill="currentColor" d="M19,19H5V8H19M16,1V3H8V1H6V3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3H18V1M17,12H12V17H17V12Z" />
   </svg>
-            <p>Février 2020</p>
+            <p>Temporada 2022/2023</p>
           </div>
         </div>
-        <p class="disclaimer">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi eveniet perferendis culpa. Expedita architecto nesciunt, rem distinctio</p>
+        <p class="disclaimer">Aquí te doy un consejo de que siempre tienes que llevar guantes, porque lo primero que toca el suelo si te caes, son las manos y te puedes hacer un cristo.</p>
         </div>
     </div>
   </li>
   <li class="booking-card" style="background-image: url(./images/helmet.png);">
     <div class="book-container">
       <div class="content">
-        <button class="btn">Réserver</button>
+        <button class="btn"><a href="./vistas/vistaProductos.php" class="text-white">Comprar</a></button>
       </div>
     </div>
     <div class="informations-container">
-      <h2 class="title">Encore un billet</h2>
-      <p class="sub-title">Encore un sous-titre</p>
+      <h2 class="title">Cascos de calidad</h2>
+      <p class="sub-title">ABUS, KASK y muchas más</p>
       <p class="price"><svg class="icon" style="width:24px;height:24px" viewBox="0 0 24 24">
     <path fill="currentColor" d="M3,6H21V18H3V6M12,9A3,3 0 0,1 15,12A3,3 0 0,1 12,15A3,3 0 0,1 9,12A3,3 0 0,1 12,9M7,8A2,2 0 0,1 5,10V14A2,2 0 0,1 7,16H17A2,2 0 0,1 19,14V10A2,2 0 0,1 17,8H7Z" />
-</svg>20 €</p>
+</svg>Desde 79,99 €</p>
       <div class="more-information">
         <div class="info-and-date-container">
           <div class="box info">
             <svg class="icon" style="width:24px;height:24px" viewBox="0 0 24 24">
       <path fill="currentColor" d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z" />
   </svg>
-            <p>Le Trident à CHERBOURG</p>
+            <p>Durabilidad de 3 años</p>
           </div>
           <div class="box date">
             <svg class="icon" style="width:24px;height:24px" viewBox="0 0 24 24">
       <path fill="currentColor" d="M19,19H5V8H19M16,1V3H8V1H6V3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3H18V1M17,12H12V17H17V12Z" />
   </svg>
-            <p>Février 2020</p>
+            <p>Durabilidad y resistencia aseguradas</p>
           </div>
         </div>
-        <p class="disclaimer">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi eveniet perferendis culpa. Expedita architecto nesciunt, rem distinctio</p>
+        <p class="disclaimer">Siempre hay que llevar casco porque es el elemento que absorbe el impacto de nuestra cabe y nos puede salvar la vida en cualquier momento.</p>
         </div>
     </div>
   </li>
 </ul>
-
-
       </div>
+
+<!-- Acceso to wapos -->
+
 
       <!-- Footer -->
       <footer class="text-center text-white" style="background-color: #f1f1f1;">
