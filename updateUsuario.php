@@ -20,9 +20,12 @@
     ?>
 </head>
 <body>
-<section class="intro">
+
+<?php include './elementosVisuales/header.php'; ?>
+
+<div class="container pt-5 pb-5 bg-light">
   <div class="bg-image h-100">
-    <div class="mask d-flex align-items-center h-100" style="background-color: #f3f2f2;">
+    <div class="mask d-flex align-items-center h-100">
       <div class="container">
         <div class="row d-flex justify-content-center align-items-center">
           <div class="col-12 col-lg-9 col-xl-8">
@@ -44,6 +47,11 @@
                       <div class="form-outline mb-4">
                         <input type="email" id="form2Example2" class="form-control" name="correito" required/>
                         <label class="form-label" for="form2Example2">Email</label>
+                      </div>
+
+                      <div class="form-outline mb-4">
+                        <input type="phone" id="form2Example2" class="form-control" name="telef" maxlength="9" required/>
+                        <label class="form-label" for="form2Example2">Telefono</label>
                       </div>
 
                       <div class="form-outline mb-4">
@@ -72,6 +80,9 @@
       </div>
     </div>
   </div>
-</section>
+                          </div>
+
+<?php include './elementosVisuales/footer.php'; ?>
+
 </body>
 </html>

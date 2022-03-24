@@ -19,83 +19,8 @@
 </head>
 <body>
 <?php echo "<p style='color: white;'>p</p>";  ?>
-<div class="container" style="width: 70%;">
-    <header>
-      <!-- Navbar -->
-      <nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
-  <!-- Container wrapper -->
-        <div class="container">
-    <!-- Navbar brand -->
-    <a class="navbar-brand me-2" href="./index.php">
-      <img
-        src="./images/navLogo.png"
-        height="100"
-        alt="MDB Logo"
-        loading="lazy"
-        style="margin-top: -1px; border-radius: 10px;"
-      />
-    </a>
 
-    <!-- Toggle button -->
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-mdb-toggle="collapse"
-      data-mdb-target="#navbarButtonsExample"
-      aria-controls="navbarButtonsExample"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <i class="fas fa-bars"></i>
-    </button>
-
-    <!-- Collapsible wrapper -->
-    <div class="collapse navbar-collapse" id="navbarButtonsExample">
-      <!-- Left links -->
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Bicis</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Componentes</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Equipación</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Quienes Somos</a>
-        </li>
-      </ul>
-      <!-- Left links -->
-      <?php
-        if (empty($_SESSION['usuarioRegistrado'])) {
-            echo "
-            <div class='d-flex align-items-center'>
-            <a class='btn btn-link px-3 me-2' href='./login.php' role='button'>Login</a>
-            <a class='btn btn-primary me-3' href='./registro.php' role='button'>Regístrate</a>
-            </div>";
-        }else{
-            echo "
-            <div class='d-flex align-items-center'>
-            <a class='btn btn-primary px-3 me-2' href='./perfilUsuario.php' role='button'>Mi Cuenta</a>
-            <a class='btn btn-danger px-3 me-2' href='./cerrarSesion.php' role='button'><i class='fa-solid fa-door-open'></i></a>
-            </div>";
-        }
-    ?>
-        <div class="d-flex align-items-center">
-        <a
-          class="btn btn-dark px-3"
-          href="https://github.com/avaropinto"
-          role="button"
-          ><i class="fab fa-github"></i></a>
-        </div>
-    </div>
-    <!-- Collapsible wrapper -->
-  </div>
-  <!-- Container wrapper -->
-</nav>
-</header>
-<!-- Navbar -->
+<?php include './elementosVisuales/header.php'; ?>
 
 <!-- Carousel de fotos -->
       <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
@@ -106,7 +31,7 @@
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="./images/carousel2.jpeg" class="d-block w-100 rounded" alt="...">
+            <a href="./vistas/vistaBicis.php"><img src="./images/carousel2.jpeg" class="d-block w-100 rounded" alt="..."></a>
             <div class="carousel-caption d-none d-md-block">
               <h5>Bicis completas</h5>
               <p>Elige una y a rodar.</p>
@@ -316,61 +241,7 @@
 
 <!-- Acceso to wapos -->
 
+<?php include './elementosVisuales/footer.php'; ?>
 
-      <!-- Footer -->
-      <footer class="text-center text-white" style="background-color: #f1f1f1;">
-  <!-- Grid container -->
-  <div class="container pt-4">
-    <!-- Section: Social media -->
-    <section class="mb-4">
-      <!-- Google -->
-      <a
-        class="btn btn-link btn-floating btn-lg text-dark m-1"
-        href="mailto:alvaropintoarevalo@gmail.com"
-        role="button"
-        data-mdb-ripple-color="dark"
-        ><i class="fab fa-google"></i
-      ></a>
-
-      <!-- Instagram -->
-      <a
-        class="btn btn-link btn-floating btn-lg text-dark m-1"
-        href="https://www.instagram.com/avaropinto_/?Subject=Bloste%20Bikes"
-        role="button"
-        data-mdb-ripple-color="dark"
-        ><i class="fab fa-instagram"></i
-      ></a>
-
-      <!-- Linkedin -->
-      <a
-        class="btn btn-link btn-floating btn-lg text-dark m-1"
-        href="https://www.linkedin.com/in/alvaropintoarevalo/"
-        role="button"
-        data-mdb-ripple-color="dark"
-        ><i class="fab fa-linkedin"></i
-      ></a>
-      <!-- Github -->
-      <a
-        class="btn btn-link btn-floating btn-lg text-dark m-1"
-        href="https://github.com/AvaroPinto"
-        role="button"
-        data-mdb-ripple-color="dark"
-        ><i class="fab fa-github"></i
-      ></a>
-    </section>
-    <!-- Section: Social media -->
-  </div>
-  <!-- Grid container -->
-
-  <!-- Copyright -->
-  <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-    © 2020 Copyright:
-    <a class="text-dark" href="">Tronkis By Avaro</a>
-  </div>
-  <!-- Copyright -->
-</footer>
-<!-- Footer -->
-</div>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     </body>
 </html>

@@ -24,8 +24,6 @@ session_start();
       $correo = $registro['correo'];
       $contrasena = $registro['contrasena'];
       $telefono = $registro['telefono'];
-
-      
   }
 ?>
 
@@ -42,84 +40,9 @@ session_start();
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script><!-- Dejamos puesto aqui el cdn de sweetalert -->
 </head>
 <body>
-  <?php echo "<p style='color: white;'>p</p>";  ?>
-<div class="container"  style="width: 70%;">
-    <header>
-      <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
-  <!-- Container wrapper -->
-  <div class="container">
-    <!-- Navbar brand -->
-    <a class="navbar-brand me-2" href="./index.php">
-      <img
-        src="./images/navLogo.png"
-        height="100"
-        alt="MDB Logo"
-        loading="lazy"
-        style="margin-top: -1px; border-radius: 10px;"
-      />
-    </a>
+<?php echo "<p style='color: white;'>p</p>";  ?>
+<?php include './elementosVisuales/header.php'; ?>
 
-    <!-- Toggle button -->
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-mdb-toggle="collapse"
-      data-mdb-target="#navbarButtonsExample"
-      aria-controls="navbarButtonsExample"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <i class="fas fa-bars"></i>
-    </button>
-
-    <!-- Collapsible wrapper -->
-    <div class="collapse navbar-collapse" id="navbarButtonsExample">
-      <!-- Left links -->
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Bicis</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Componentes</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Equipación</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Quienes Somos</a>
-        </li>
-      </ul>
-      <!-- Left links -->
-      <?php
-        if (empty($_SESSION['usuarioRegistrado'])) {
-            echo "
-            <div class='d-flex align-items-center'>
-            <a class='btn btn-link px-3 me-2' href='./login.php' role='button'>Login</a>
-            <a class='btn btn-primary me-3' href='./registro.php' role='button'>Regístrate</a>
-            </div>";
-        }else{
-            echo "
-            <div class='d-flex align-items-center'>
-            <a class='btn btn-primary px-3 me-2' href='./perfilUsuario.php' role='button'>Mi Cuenta</a>
-            <a class='btn btn-danger px-3 me-2' href='./cerrarSesion.php' role='button'><i class='fa-solid fa-door-open'></i></a>
-            </div>";
-        }
-    ?>
-        <div class="d-flex align-items-center">
-        <a
-          class="btn btn-dark px-3"
-          href="https://github.com/avaropinto"
-          role="button"
-          ><i class="fab fa-github"></i></a>
-        </div>
-    </div>
-    <!-- Collapsible wrapper -->
-  </div>
-  <!-- Container wrapper -->
-</nav>
-<!-- Navbar -->
-      </header>
       <section style="background-color: #eee;">
   <div class="container py-5">
     <div class="row">
@@ -141,7 +64,7 @@ session_start();
             <h5 class="my-3"><?php echo $nombre; ?></h5>
             <p class="text-muted mb-1">Usuario Bloste Premium</p>
             <div class="d-flex justify-content-center mb-2">
-              <a class="btn btn-danger mt-3 mb-4" href="deleteUsuario.php" role="button">Eliminar Perfil</a>
+            <button type="button" class="btn btn-danger m-4" onclick="dualidad()">Eliminar Perfil</button>
             </div>
           </div>
         </div>
@@ -229,60 +152,33 @@ session_start();
   </div>
 </section>
 
-      <!-- Footer -->
-      <footer class="text-center text-white" style="background-color: #f1f1f1;">
-  <!-- Grid container -->
-  <div class="container pt-4">
-    <!-- Section: Social media -->
-    <section class="mb-4">
-      <!-- Google -->
-      <a
-        class="btn btn-link btn-floating btn-lg text-dark m-1"
-        href="mailto:alvaropintoarevalo@gmail.com"
-        role="button"
-        data-mdb-ripple-color="dark"
-        ><i class="fab fa-google"></i
-      ></a>
+<?php include './elementosVisuales/footer.php'; ?>
 
-      <!-- Instagram -->
-      <a
-        class="btn btn-link btn-floating btn-lg text-dark m-1"
-        href="https://www.instagram.com/avaropinto_/?Subject=Bloste%20Bikes"
-        role="button"
-        data-mdb-ripple-color="dark"
-        ><i class="fab fa-instagram"></i
-      ></a>
 
-      <!-- Linkedin -->
-      <a
-        class="btn btn-link btn-floating btn-lg text-dark m-1"
-        href="https://www.linkedin.com/in/alvaropintoarevalo/"
-        role="button"
-        data-mdb-ripple-color="dark"
-        ><i class="fab fa-linkedin"></i
-      ></a>
-      <!-- Github -->
-      <a
-        class="btn btn-link btn-floating btn-lg text-dark m-1"
-        href="https://github.com/AvaroPinto"
-        role="button"
-        data-mdb-ripple-color="dark"
-        ><i class="fab fa-github"></i
-      ></a>
-    </section>
-    <!-- Section: Social media -->
-  </div>
-  <!-- Grid container -->
-
-  <!-- Copyright -->
-  <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-    © 2020 Copyright:
-    <a class="text-dark" href="">Tronkis By Avaro</a>
-  </div>
-  <!-- Copyright -->
-</footer>
-<!-- Footer -->
-    </div>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+      <script>
+        function dualidad(){
+          Swal.fire({
+            title: 'Estas seguro de Eliminar tu usuario?',
+            text: "La acción es irreversible!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Confirmar!'
+          }).then((result) => {
+            if (result.isConfirmed) {
+              Swal.fire(
+                'Perfil eliminado!',
+                'Tus datos han sido eliminados.',
+                'success'
+              )
+              const myTimeout = setTimeout(myGreeting, 1500);
+              function myGreeting() {
+                window.location.href="deleteUsuario.php";
+              }
+            }
+          })
+        }
+      </script>
 </body>
 </html>

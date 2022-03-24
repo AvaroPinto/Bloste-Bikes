@@ -6,6 +6,7 @@ $nombre=$_SESSION['usuarioRegistrado'];
 
 $correo=$_REQUEST['correito'];
 $contra=$_REQUEST['contracontra'];
+$tele=$_REQUEST['telef'];
 
 $servername = "localhost";
 $username = "root";
@@ -21,7 +22,7 @@ if($registro = mysqli_fetch_array($seleccion)) {
     header("location: ../updateUsuario.php");
 }else{
     echo "no encontrado";
-    mysqli_query($conexion, "UPDATE usuarios SET correo='$correo', contrasena='$contra' WHERE nombreUsuario='$nombre'");
+    mysqli_query($conexion, "UPDATE usuarios SET correo='$correo', contrasena='$contra', telefono='$tele' WHERE nombreUsuario='$nombre'");
     header("location: ../perfilUsuario.php");
 }
 
