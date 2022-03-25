@@ -1,3 +1,7 @@
+<?php
+  //Este comentario es para que me ponga que es un archivo php
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
