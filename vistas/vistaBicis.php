@@ -41,126 +41,38 @@
                 <button class="btnn btn1 m-2">Fixie</button>
             </form>
         </div>
-        
         <div class="row">
-            <div class="col-lg-3 col-sm-6 d-flex flex-column align-items-center justify-content-center product-item my-3">
-                <div class="product"> <img src="../images/productos/trekEjemplo.jpeg" alt="" class="rounded">
-                    <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
-                        <li class="icon"><span class="fas fa-expand-arrows-alt"></span></li>
-                        <li class="icon mx-3"><span class="far fa-heart"></span></li>
-                        <li class="icon"><span class="fas fa-shopping-bag"></span></li>
-                    </ul>
-                </div>
-                <div class="tag bg-red">Best Selling</div>
-                <div class="title pt-4 pb-1">Winter Check Shirt & Jacket</div>
-                <div class="d-flex align-content-center justify-content-center"> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> </div>
-                <div class="price">₹ 2000.0</div>
-            </div>
-            <div class="col-lg-3 col-sm-6 d-flex flex-column align-items-center justify-content-center product-item my-3">
-                <div class="product"> <img src="../images/productos/trekEjemplo.jpeg" alt="" class="rounded">
-                    <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
-                        <li class="icon"><span class="fas fa-expand-arrows-alt"></span></li>
-                        <li class="icon mx-3"><span class="far fa-heart"></span></li>
-                        <li class="icon"><span class="fas fa-shopping-bag"></span></li>
-                    </ul>
-                </div>
-                <div class="tag bg-warning">out of stock</div>
-                <div class="title pt-4 pb-1">Yellow Skirt</div>
-                <div class="d-flex align-content-center justify-content-center"> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> </div>
-                <div class="price">₹ 4000.0</div>
-            </div>
-            <div class="col-lg-3 col-sm-6 d-flex flex-column align-items-center justify-content-center product-item my-3">
-                <div class="product"> <img src="../images/productos/trekEjemplo.jpeg" alt="" class="rounded">
-                    <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
-                        <li class="icon"><span class="fas fa-expand-arrows-alt"></span></li>
-                        <li class="icon mx-3"><span class="far fa-heart"></span></li>
-                        <li class="icon"><span class="fas fa-shopping-bag"></span></li>
-                    </ul>
-                </div>
-                <div class="tag bg-green">latest</div>
-                <div class="title pt-4 pb-1"> White shirt & White short</div>
-                <div class="d-flex align-content-center justify-content-center"> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> </div>
-                <div class="price">₹ 5000.0</div>
-            </div>
-            <div class="col-lg-3 col-sm-6 d-flex flex-column align-items-center justify-content-center product-item my-3">
-                <div class="product"> <img src="../images/productos/trekEjemplo.jpeg" alt="" class="rounded">
-                    <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
-                        <li class="icon"><span class="fas fa-expand-arrows-alt"></span></li>
-                        <li class="icon mx-3"><span class="far fa-heart"></span></li>
-                        <li class="icon"><span class="fas fa-shopping-bag"></span></li>
-                    </ul>
-                </div>
-                <div class="title pt-4 pb-1">Men Shorts</div>
-                <div class="d-flex align-content-center justify-content-center"> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> </div>
-                <div class="price">₹ 1000.0</div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-3 col-sm-6 d-flex flex-column align-items-center justify-content-center product-item my-3">
-                <div class="product"> <img src="../images/productos/trekEjemplo.jpeg" alt="" class="rounded">
-                    <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
-                        <li class="icon"><span class="fas fa-expand-arrows-alt"></span></li>
-                        <li class="icon mx-3"><span class="far fa-heart"></span></li>
-                        <li class="icon"><span class="fas fa-shopping-bag"></span></li>
-                    </ul>
-                </div>
-                <div class="tag bg-red">Best Selling</div>
-                <div class="title pt-4 pb-1">Denim Jumpsuit</div>
-                <div class="d-flex align-content-center justify-content-center"> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> </div>
-                <div class="price">₹ 3000.0</div>
-            </div>
-            <div class="col-lg-3 col-sm-6 d-flex flex-column align-items-center justify-content-center product-item my-3">
-                <div class="product"> <img src="../images/productos/trekEjemplo.jpeg" alt="" class="rounded">
-                    <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
-                        <li class="icon"><span class="fas fa-expand-arrows-alt"></span></li>
-                        <li class="icon mx-3"><span class="far fa-heart"></span></li>
-                        <li class="icon"><span class="fas fa-shopping-bag"></span></li>
-                    </ul>
-                </div>
-                <div class="tag bg-warning">out of stock</div>
-                <div class="title pt-4 pb-1">Sexy Denim Shorts</div>
-                <div class="d-flex align-content-center justify-content-center"> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> </div>
-                <div class="price">₹ 5000.00</div>
-            </div>
-            <div class="col-lg-3 col-sm-6 d-flex flex-column align-items-center justify-content-center product-item my-3">
-                <div class="product"> <img src="../images/productos/trekEjemplo.jpeg" alt="red dress" class="rounded">
-                    <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
-                        <li class="icon"><span class="fas fa-expand-arrows-alt"></span></li>
-                        <li class="icon mx-3"><span class="far fa-heart"></span></li>
-                        <li class="icon"><span class="fas fa-shopping-bag"></span></li>
-                    </ul>
-                </div>
-                <div class="title pt-4 pb-1"> Princess Red Dress</div>
-                <div class="d-flex align-content-center justify-content-center"> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> </div>
-                <div class="price">₹ 10000.00</div>
-            </div>
-            <div class="col-lg-3 col-sm-6 d-flex flex-column align-items-center justify-content-center product-item my-3">
-                <div class="product"> <img src="../images/productos/trekEjemplo.jpeg" alt="" class="rounded">
-                    <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
-                        <li class="icon"><span class="fas fa-expand-arrows-alt"></span></li>
-                        <li class="icon mx-3"><span class="far fa-heart"></span></li>
-                        <li class="icon"><span class="fas fa-shopping-bag"></span></li>
-                    </ul>
-                </div>
-                <div class="tag bg-green">new</div>
-                <div class="title pt-4 pb-1">White sandel</div>
-                <div class="d-flex align-content-center justify-content-center"> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> </div>
-                <div class="price">₹ 2000</div>
-            </div>
-            <div class="col-lg-3 col-sm-6 d-flex flex-column align-items-center justify-content-center product-item my-3">
-                <div class="product"> <img src="../images/productos/trekEjemplo.jpeg" alt="" class="rounded">
-                    <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
-                        <li class="icon"><span class="fas fa-expand-arrows-alt"></span></li>
-                        <li class="icon mx-3"><span class="far fa-heart"></span></li>
-                        <li class="icon"><span class="fas fa-shopping-bag"></span></li>
-                    </ul>
-                </div>
-                <div class="tag bg-green">new</div>
-                <div class="title pt-4 pb-1">White sandel</div>
-                <div class="d-flex align-content-center justify-content-center"> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> <span class="fas fa-star"></span> </div>
-                <div class="price">₹ 2000</div>
-            </div>
-        </div>
+
+            <?php
+
+            $servername = "localhost";
+            $username = "root";
+            $password = "";
+            $dbname = "blostebikes";
+
+            $conexion = new mysqli($servername, $username, $password, $dbname);
+            if($seleccion = mysqli_query($conexion, "SELECT * FROM productos WHERE tipoProducto = 'bicicleta'")){
+                while($linea = mysqli_fetch_array($seleccion)){
+                    
+                    echo "<div class='col-lg-3 col-sm-6 d-flex flex-column align-items-center justify-content-center product-item my-3'>
+                        <div class='product'> <img src=".$linea['imagen']." alt='' class='rounded'>
+                            <ul class='d-flex align-items-center justify-content-center list-unstyled icons'>
+                                <li class='icon'><span class='fas fa-expand-arrows-alt'></span></li>
+                                <li class='icon mx-3'><span class='far fa-heart'></span></li>
+                                <li class='icon'><span class='fas fa-shopping-bag'></span></li>
+                            </ul>
+                        </div>
+                        <div class='tag bg-red'>Top Ventas</div>
+                        <div class='title pt-4 pb-1'>".$linea['nombreProducto']."</div>
+                        <div class='d-flex align-content-center justify-content-center'> <span class='fas fa-star'></span> <span class='fas fa-star'></span> <span class='fas fa-star'></span> <span class='fas fa-star'></span> <span class='fas fa-star'></span> </div>
+                        <div class='price'>".number_format($linea['precio'], 2, ',', '.')." €</div>
+                    </div>";
+
+                }
+            }
+
+            ?>
+        </div> 
     </div>
     <?php include '../elementosVisuales/footer.php'; ?>    
 </body>
