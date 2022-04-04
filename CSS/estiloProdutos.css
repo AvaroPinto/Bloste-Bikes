@@ -22,7 +22,7 @@
     object-fit: cover;
 }
 
-.container .product-item .product .icons .icon {
+.container .product-item .product .icons .icon{
     width: 40px;
     height: 40px;
     background-color: #fff;

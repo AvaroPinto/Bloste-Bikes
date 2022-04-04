@@ -14,6 +14,11 @@
     <link rel="stylesheet" href="../CSS/estiloProdutos.css">
     <link rel="stylesheet" href="../CSS/botones.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <style>
+        #luces:hover{
+            color:white;
+        }
+    </style>
 </head>
 <body>
     <?php echo "<p style='color: white;'>p</p>";  ?>
@@ -66,8 +71,11 @@
                             <div class='col-lg-3 col-sm-6 d-flex flex-column align-items-center justify-content-center product-item my-3'>
                                 <div class='product'><img src=".$linea['imagen']." alt='' class='rounded'>
                                     <ul class='d-flex align-items-center justify-content-center list-unstyled icons'>
-                                        <li class='icon'><span class='fas fa-expand-arrows-alt base' id='".$linea['nombreProducto']."'></span></li>–
-                                        <li class='icon mx-3'><span class='far fa-heart'></span></li>
+                                        <li class='icon'><span class='fas fa-expand-arrows-alt base' id='".$linea['nombreProducto']."'></span></li>
+                                        <form method='POST' action='../gestionDeseos.php'>
+                                            <input name='numId' type='hidden' value=".$linea['IDPro'].">
+                                            <li class='icon mx-3'><button id='luces' style='border:none; opacity:0,0; border-radius:50%; height:50px;' class='far fa-heart bg-transparent' type='submit'></button></li>
+                                        </form>
                                         <li class='icon'><span class='fas fa-shopping-bag'></span></li>
                                     </ul>
                                 </div>
@@ -75,6 +83,7 @@
                                 <div class='title pt-4 pb-1'>".$linea['nombreProducto']."</div>
                                 <div id='".$linea['descripcion']."' class='title pt-4 pb-1 d-none descBase'>".$linea['descripcion']."</div>
                                 <div id='".$linea['imagen']."' class='title pt-4 pb-1 d-none imgBase'>".$linea['imagen']."</div>
+                                <div id='".$linea['IDPro']."' class='title pt-4 pb-1 d-none IDBase'>".$linea['IDPro']."</div>
                                 <div id='".number_format($linea['precio'], 2, ',', '.')."' class='title pt-4 pb-1 d-none precioBase'>".number_format($linea['precio'], 2, ',', '.')."</div>
                                 <div class='d-flex align-content-center justify-content-center'> <span class='fas fa-star'></span> <span class='fas fa-star'></span> <span class='fas fa-star'></span> <span class='fas fa-star'></span> <span class='fas fa-star'></span> </div>
                                 <div class='price'>".number_format($linea['precio'], 2, ',', '.')." €</div>
@@ -123,7 +132,10 @@
                             <form method="POST" action="" style="float: left;">
                                 <button class="btn btn-dark m-1" type="submit">Añadir Carrito</button>
                             </form>
-                            <form method="POST" action="../listaDeseos.php" style="float: left;">
+                            <form method="POST" action="../gestionDeseos.php" style="float: left;">
+                                <input id="prodId" name="prodId" type="hidden" value="">
+                                <input id="descId" name="descId" type="hidden" value="">
+                                <input id="numId" name="numId" type="hidden" value="">
                                 <button class="btn btn-success m-1" type="submit">Lista Deseos</button>
                             </form>
                             <button id="regreso" class="btn btn-info m-1" style="color: white;" type="button">VOLVER</button>
@@ -142,6 +154,7 @@
     var botones = document.querySelectorAll(".base");
     var descripciones = document.querySelectorAll(".descBase");
     var imagenes = document.querySelectorAll(".imgBase");
+    var identificadores = document.querySelectorAll(".IDBase");
     var precios = document.querySelectorAll(".precioBase");
     var productos = document.getElementById("panel");
     var tarjetas = document.getElementById("categoriasBici");
@@ -161,6 +174,9 @@
         document.getElementById("pictograma").src = imagenes[i].getAttribute("id");
         document.getElementById("dineros").innerText = precios[i].getAttribute("id")+ "€ ";
         document.getElementById("miguitas").innerText=botones[i].getAttribute("id");
+        document.getElementById("prodId").value=botones[i].getAttribute("id");
+        document.getElementById("numId").value=identificadores[i].getAttribute("id");
+        document.getElementById("descId").value=descripciones[i].getAttribute("id");
     });
     volver.addEventListener("click", function(){
         productos.classList.remove("d-none");

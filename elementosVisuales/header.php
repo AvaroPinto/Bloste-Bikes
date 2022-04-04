@@ -57,6 +57,9 @@
         <li class="nav-item">
           <a class="nav-link" href="#">Quienes Somos</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../listaDeseos.php">Carrito</a>
+        </li>
       </ul>
       <!-- Left links -->
       <?php
