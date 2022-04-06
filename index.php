@@ -38,14 +38,14 @@
             </div>
           </div>
           <div class="carousel-item">
-            <img src="./images/carousel3.jpeg" class="d-block w-100 rounded" alt="...">
+          <a href="./vistas/fixie.php"><img src="./images/carousel3.jpeg" class="d-block w-100 rounded" alt="..."></a>
             <div class="carousel-caption d-none d-md-block">
               <h5>Selecciona Componentes</h5>
               <p>Crea la bici de tus sueños.</p>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="./images/header2.jpeg" class="d-block w-100 rounded" alt="...">
+          <a href="./vistas/ebike.php"><img src="./images/header2.jpeg" class="d-block w-100 rounded" alt="..."></a>
             <div class="carousel-caption d-none d-md-block">
               <h5>Equípate</h5>
               <p>Y llega a lugares que nunca imaginaste.</p>

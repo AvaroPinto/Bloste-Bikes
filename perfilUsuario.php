@@ -66,6 +66,24 @@ session_start();
             <div class="d-flex justify-content-center mb-2">
             <button type="button" class="btn btn-danger m-4" onclick="dualidad()">Eliminar Perfil</button>
             </div>
+            <hr>
+            <div class="row">
+              <div class="col mt-3 mb-3">
+                <p class="mb-0">Carrito</p>
+              </div>
+              <div class="col mt-2">
+              <a class="btn btn-primary w-50" href="carrito.php" role="button">Ver</a>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col mt-3">
+                <p class="mb-0">Lista Deseos</p>
+              </div>
+              <div class="col mt-2">
+              <a class="btn btn-primary w-50" href="listaDeseos.php" role="button">Ver</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
