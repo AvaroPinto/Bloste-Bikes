@@ -58,7 +58,7 @@
           <a class="nav-link" href="#">Quienes Somos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../listaDeseos.php">Carrito</a>
+          <a class="nav-link" href="../carrito.php"><i class="fas fa-shopping-cart"></i></a>
         </li>
       </ul>
       <!-- Left links -->

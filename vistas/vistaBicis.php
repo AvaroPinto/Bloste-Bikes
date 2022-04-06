@@ -74,9 +74,12 @@
                                         <li class='icon'><span class='fas fa-expand-arrows-alt base' id='".$linea['nombreProducto']."'></span></li>
                                         <form method='POST' action='../gestionDeseos.php'>
                                             <input name='numId' type='hidden' value=".$linea['IDPro'].">
-                                            <li class='icon mx-3'><button id='luces' style='border:none; opacity:0,0; border-radius:50%; height:50px;' class='far fa-heart bg-transparent' type='submit'></button></li>
+                                            <li class='icon mx-3'><button id='luces' style='border:none; opacity:0,0; border-radius:50%; height:50px; width:50px;' class='far fa-heart bg-transparent' type='submit'></button></li>
                                         </form>
-                                        <li class='icon'><span class='fas fa-shopping-bag'></span></li>
+                                        <form method='POST' action='../anadirLista.php'>
+                                            <input name='toCarro' type='hidden' value=".$linea['IDPro'].">
+                                            <li class='icon'><button id='luces' style='border:none; opacity:0,0; border-radius:50%; height:50px; width:50px;' class='fas fa-shopping-bag bg-transparent' type='submit'></button></li>
+                                        </form>
                                     </ul>
                                 </div>
                                 <div class='tag bg-red'>Top Ventas</div>
@@ -129,7 +132,8 @@
                         <div class="d-flex align-items-center mt-2"> <label class="radio"> <input type="radio" name="ram" value="128GB" checked> <span>S&nbsp;</span> </label> <label class="radio"> <input type="radio" name="ram" value="256GB"> <span>M&nbsp;</span> </label> <label class="radio"> <input type="radio" name="ram" value="256GB"> <span>L&nbsp;</span> </label> </div>
                         <div><span class="font-weight-bold">Vendedor: </span><span class="ml-2">Industrias Paloma</span></div>
                         <div class="mt-3">
-                            <form method="POST" action="" style="float: left;">
+                            <form method="POST" action="../anadirLista.php" style="float: left;">
+                                <input id="numId" name="toCarro" type="hidden" value="">
                                 <button class="btn btn-dark m-1" type="submit">Añadir Carrito</button>
                             </form>
                             <form method="POST" action="../gestionDeseos.php" style="float: left;">

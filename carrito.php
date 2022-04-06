@@ -16,7 +16,7 @@
     $totalProductos=0;
 
     $conexion = new mysqli($servername, $username, $password, $dbname);
-    if($seleccion = mysqli_query($conexion, "SELECT * FROM listaDeseos WHERE usuario = '$nombre'")){
+    if($seleccion = mysqli_query($conexion, "SELECT * FROM carrito WHERE usuario = '$nombre'")){
       while($linea = mysqli_fetch_array($seleccion)){
         $totalProductos=$totalProductos+1;
       }
@@ -34,7 +34,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="shortcut icon" type="image/x-icon" href="../images/titleBarImage.ico">
-    <title>Lista Deseos</title>
+    <title>Carrito</title>
     <style>
         .gradient-custom {
         /* fallback for old browsers */
@@ -58,15 +58,12 @@
       <div class="col-md-8">
         <div class="card mb-4">
           <div class="card-header py-3">
-            <h5 class="mb-0">Lista Deseos - <?php echo $totalProductos; ?> producto(s)</h5>
+            <h5 class="mb-0">Carrito - <?php echo $totalProductos; ?> producto(s)</h5>
           </div>
 
 
           <?php
-
-
-
-              if($seleccion = mysqli_query($conexion, "SELECT * FROM listaDeseos WHERE usuario = '$nombre'")){
+              if($seleccion = mysqli_query($conexion, "SELECT * FROM carrito WHERE usuario = '$nombre'")){
                 while($linea = mysqli_fetch_array($seleccion)){
                   echo "
                     <div class='card-body'>
@@ -86,7 +83,7 @@
 
                         <div class='col-lg-5 col-md-6 mb-4 mb-lg-0'>
                           <!-- Data -->
-                          <p><strong>".$linea['nombrePro']."</strong></p>
+                          <p><strong>".$linea['nombreProducto']."</strong></p>
                           <p>Marca: ".$linea['MarcaProducto']."</p>
                           <p>Categoria: ".$linea['categoria']."</p>
                           
@@ -97,23 +94,16 @@
                           <!-- Quantity -->
                           <div class='mb-4'>
                             <br>
-                            <form method='POST' action='./eliminarLista.php' style='float:left; margin-right:5px;'>
+                            <span class='text-start' style='float:left; margin-right: 10px;'>
+                            <strong>".number_format($linea['PrecioProducto'], 2, ',', '.')." €</strong>
+                            </span>
+                            <form method='POST' action='./eliminarCarro.php'>
                             <input id='descId' name='toEliminar' type='hidden' value='".$linea['IDProducto']."'>
-                              <button type='submit' class='btn btn-primary btn-sm me-1 mb-2 mx-auto' data-mdb-toggle='tooltip'
+                              <button type='submit' class='btn btn-danger btn-sm me-1 mb-2 mx-auto w-25' data-mdb-toggle='tooltip'
                                 title='Remove item'>
                                 <i class='fas fa-trash'></i>
                               </button>
                             </form>
-                            <form method='POST' action='./anadirLista.php'>
-                            <input id='descId' name='toCarro' type='hidden' value='".$linea['IDProducto']."'>
-                              <button type='submit' class='btn btn-danger btn-sm mb-2' data-mdb-toggle='tooltip'
-                                title='Move to the wish list'>
-                                <i class='fas fa-shopping-cart'></i>
-                              </button>
-                            </form>
-                            <p class='text-start'>
-                            <strong>".number_format($linea['PrecioProducto'], 2, ',', '.')." €</strong>
-                          </p>
 
                           </div>
                           <!-- Quantity -->
@@ -180,6 +170,9 @@
                 <span><strong><?php echo number_format($total, 2, ',', '.'); ?> €</strong></span>
               </li>
             </ul>
+            <div>
+            <button type="button" class="btn btn-success w-100">Finalizar Pedido</button>
+            </div>
           </div>
         </div>
       </div>
