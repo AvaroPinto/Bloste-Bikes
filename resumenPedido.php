@@ -6,6 +6,12 @@
       $nombre = $_SESSION['usuarioRegistrado'];
     }
 
+    $direccion= $_REQUEST['direccionDir'];
+    $nombreDir= $_REQUEST['nombreDir'];
+    $ciudad= $_REQUEST['ciudadDir'];
+    $comunidad= $_REQUEST['comunidadDir'];
+    $postal= $_REQUEST['codigoDir'];
+
     //cosas de la BBDD
     $servername = "localhost";
     $username = "root";
@@ -32,7 +38,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="shortcut icon" type="image/x-icon" href="../images/titleBarImage.ico">
-    <title>Carrito</title>
+    <title>Finalizar Pedido</title>
     <style>
         .gradient-custom {
         /* fallback for old browsers */
@@ -56,7 +62,7 @@
       <div class="col-md-8">
         <div class="card mb-4">
           <div class="card-header py-3">
-            <h5 class="mb-0">Carrito - <?php echo $totalProductos; ?> producto(s)</h5>
+            <h5 class="mb-0">Resumen Pedido - <?php echo $totalProductos; ?> producto(s)</h5>
           </div>
 
 
@@ -95,14 +101,6 @@
                             <span class='text-start' style='float:left; margin-right: 10px;'>
                             <strong>".number_format($linea['PrecioProducto'], 2, ',', '.')." €</strong>
                             </span>
-                            <form method='POST' action='./eliminarCarro.php'>
-                            <input id='descId' name='toEliminar' type='hidden' value='".$linea['IDProducto']."'>
-                              <button type='submit' class='btn btn-danger btn-sm me-1 mb-2 mx-auto w-25' data-mdb-toggle='tooltip'
-                                title='Remove item'>
-                                <i class='fas fa-trash'></i>
-                              </button>
-                            </form>
-
                           </div>
                           <!-- Quantity -->
 
@@ -128,6 +126,15 @@
               }
           ?>
 
+        </div>
+        <div class="card mb-4 mb-lg-0">
+          <div class="card-body">
+            <p><strong>Dirección Pedido</strong></p>
+            <p style="margin-left: 20px;"><b>Nombre:</b> <?php echo $nombreDir; ?><br>
+            <b>Ciudad:</b> <?php echo $direccion.", ".$ciudad; ?><br>
+            <b>Comunidad:</b> <?php echo $comunidad; ?><br>
+            <b>Código Postal:</b> <?php echo $postal; ?></p>
+          </div>
         </div>
         <div class="card mb-4 mb-lg-0">
           <div class="card-body">
@@ -169,13 +176,15 @@
               </li>
             </ul>
             <div>
-              <?php 
-                if ($totalProductos==0) {
-                  echo "<a class='btn btn-light w-100' href='./direccionPedido.php' role='button' style='pointer-events: none;'>Finalizar Pedido</a>";
-                }else{
-                  echo "<a class='btn btn-success w-100' href='./direccionPedido.php' role='button'>Finalizar Pedido</a>";
-                }
-              ?>
+                <form method="POST" action="./gestionPedido.php">
+                    <input name="nomJeje" type="hidden" value="<?php echo $nombreDir; ?>">
+                    <input name="dirJeje" type="hidden" value="<?php echo $direccion; ?>">
+                    <input name="ciuJeje" type="hidden" value="<?php echo $ciudad; ?>">
+                    <input name="comJeje" type="hidden" value="<?php echo $comunidad; ?>">
+                    <input name="codJeje" type="hidden" value="<?php echo $postal; ?>">
+                    <input name="totalJeje" type="hidden" value="<?php echo $total; ?>">
+                    <button class="btn btn-success w-100" type="submit">Finalizar Pedido</button>
+                </form>
             </div>
           </div>
         </div>
