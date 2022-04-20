@@ -26,11 +26,11 @@
                 if($comprobar = mysqli_query($conexion, "SELECT * FROM carrito WHERE IDProducto = '$producto' AND usuario='$nombre'")){
                     $tuplas=mysqli_num_rows($comprobar);
                     if ($tuplas>0) {
-                        //echo "encontrado";
-                        //mysqli_query($conexion, "DELETE FROM listaDeseos WHERE usuario = '$nombre' AND IDProducto='$producto'");
+                        //si encontramos el articulo ya en el carrito lo que hacemos es eliminarlo de la tabla de deseos.
+                        mysqli_query($conexion, "DELETE FROM listaDeseos WHERE usuario = '$nombre' AND IDProducto='$producto'");
                         header("location: ./carrito.php");
                     }else{
-                        //echo "no encontrado";
+                        //si no lo encontramos, se hace la insercion en la tabla de carrito y eliminamos el articulo de la tabla deseos
                         mysqli_query($conexion, "INSERT INTO carrito (usuario, IDProducto, MarcaProducto, PrecioProducto, imagen, nombreProducto, categoria) VALUES ('$nombre', '$producto', '$marca', '$precio', '$imagen', '$nombreProd', '$categoria')");
                         header("location: ./carrito.php");
                         mysqli_query($conexion, "DELETE FROM listaDeseos WHERE usuario = '$nombre' AND IDProducto='$producto'");

@@ -139,7 +139,7 @@
                             <form method="POST" action="../gestionDeseos.php" style="float: left;">
                                 <input id="prodId" name="prodId" type="hidden" value="">
                                 <input id="descId" name="descId" type="hidden" value="">
-                                <input id="numId" name="numId" type="hidden" value="">
+                                <input id="numIdt" name="numId" type="hidden" value="">
                                 <button class="btn btn-success m-1" type="submit">Lista Deseos</button>
                             </form>
                             <button id="regreso" class="btn btn-info m-1" style="color: white;" type="button">VOLVER</button>
@@ -180,6 +180,7 @@
         document.getElementById("miguitas").innerText=botones[i].getAttribute("id");
         document.getElementById("prodId").value=botones[i].getAttribute("id");
         document.getElementById("numId").value=identificadores[i].getAttribute("id");
+        document.getElementById("numIdt").value=identificadores[i].getAttribute("id");
         document.getElementById("descId").value=descripciones[i].getAttribute("id");
     });
     volver.addEventListener("click", function(){

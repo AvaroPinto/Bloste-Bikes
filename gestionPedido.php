@@ -22,7 +22,7 @@
 
     $conexion = new mysqli($servername, $username, $password, $dbname);
 
-    $sql = "INSERT INTO pedidos (usuario, nombreCli, direccionCli, Importe) VALUES ('$nombre', '$nombreFinal', '$direccionFinal', '$importeFinal')";
+    $sql = "INSERT INTO pedidos (usuario, nombreCli, fecha, direccionCli, Importe) VALUES ('$nombre', '$nombreFinal', now(), '$direccionFinal', '$importeFinal')";
 
     //insercion en la base de datos del pedido
 
@@ -46,6 +46,6 @@
 
     //hacemos el DELETE de los articulos del carrito para dejarlo vacio y hacemos la redireccion
     mysqli_query($conexion, "DELETE FROM carrito WHERE usuario = '$nombre'");
-    header("location: ./index.php");
+    header("location: ./perfilUsuario.php");
      
 ?>

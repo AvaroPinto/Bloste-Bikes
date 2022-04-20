@@ -26,10 +26,10 @@
                 if($comprobar = mysqli_query($conexion, "SELECT * FROM listaDeseos WHERE IDProducto = '$producto' AND usuario='$nombre'")){
                     $tuplas=mysqli_num_rows($comprobar);
                     if ($tuplas>0) {
-                        //echo "encontrado";
+                        echo "encontrado";
                         header("location: ./listaDeseos.php");
                     }else{
-                        //echo "no encontrado";
+                        echo "no encontrado";
                         mysqli_query($conexion, "INSERT INTO listaDeseos (usuario, IDProducto, MarcaProducto, PrecioProducto, imagen, nombrePro, categoria) VALUES ('$nombre', '$producto', '$marca', '$precio', '$imagen', '$nombreProd', '$categoria')");
                         header("location: ./listaDeseos.php");
                     }
