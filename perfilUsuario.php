@@ -157,7 +157,11 @@ session_start();
                           <p class='text-muted mb-0'>Total: <b>".number_format($linea['Importe'], 2, ',', '.')." €</b></p>
                         </div>
                         <div class='col-sm-4'>
-                        <a class='btn btn-primary' href='updateUsuario.php' role='button'>Descargar  <i class='far fa-file-alt'></i></a>
+                          <form method='POST' action='./factura.php'>
+                            <input id='facturitis' name='numeroPedidoFactura' type='hidden' value='".$linea['IDPedido']."'>
+                            <input id='facturitistra' name='precioPedidoFactura' type='hidden' value='".$linea['Importe']."'>
+                            <button class='btn btn-primary' href='updateUsuario.php' role='button' type='submit'>Descargar  <i class='far fa-file-alt'></i></button>
+                          </form>
                         </div>
                       </div>";
                       echo "<hr>";
