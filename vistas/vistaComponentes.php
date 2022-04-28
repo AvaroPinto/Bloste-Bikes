@@ -11,7 +11,7 @@ $_SESSION['errorCode'] = 0;
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/x-icon" href="../images/titleBarImage.ico">
-    <title>Carretera</title>
+    <title>Bicis</title>
     <link rel="stylesheet" href="../CSS/estiloProdutos.css">
     <link rel="stylesheet" href="../CSS/botones.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -21,6 +21,7 @@ $_SESSION['errorCode'] = 0;
         }
     </style>
 </head>
+
 <body>
     <?php echo "<p style='color: white;'>p</p>";  ?>
     <?php include '../elementosVisuales/header.php'; ?>
@@ -31,8 +32,7 @@ $_SESSION['errorCode'] = 0;
                     <nav aria-label="breadcrumb" class="bg-light rounded-3 p-3">
                         <ol class="breadcrumb mb-0">
                             <li class="breadcrumb-item"><a href="../index.php">Home</a></li>
-                            <li class="breadcrumb-item"><a href="./vistaBicis.php">Bicicletas</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Carretera</li>
+                            <li class="breadcrumb-item active" aria-current="page">Componentes</li>
                         </ol>
                     </nav>
                 </div>
@@ -40,21 +40,8 @@ $_SESSION['errorCode'] = 0;
         </div>
     </section>
     <div class="container" style="background-color: #eee;">
-        <h2 id="titulao">Nuestras Bicicletas</h2>
-        <div id="categoriasBici" class="container d-flex justify-content-center">
-            <form action="./road.php">
-                <button class="btnn btn1 m-2">Carretera</button>
-            </form>
-            <form action="./mtb.php">
-                <button class="btnn btn1 m-2">MTB</button>
-            </form>
-            <form action="./ebike.php">
-                <button class="btnn btn1 m-2">E-Bike</button>
-            </form>
-            <form action="./fixie.php">
-                <button class="btnn btn1 m-2">Fixie</button>
-            </form>
-        </div>
+        <h2 id="titulao">Componentes y Accesorios</h2>
+        
         <div class="row" id="panel">
 
             <?php
@@ -65,7 +52,7 @@ $_SESSION['errorCode'] = 0;
             $dbname = "blostebikes";
 
             $conexion = new mysqli($servername, $username, $password, $dbname);
-            if ($seleccion = mysqli_query($conexion, "SELECT * FROM productos WHERE tipoProducto = 'bicicleta' AND categoria='road'")) {
+            if ($seleccion = mysqli_query($conexion, "SELECT * FROM productos WHERE tipoProducto = 'elemento'")) {
                 while ($linea = mysqli_fetch_array($seleccion)) {
                     //el href es opcional de momento el del ampliar producto
                     echo "
@@ -105,8 +92,7 @@ $_SESSION['errorCode'] = 0;
                             <nav aria-label="breadcrumb" class="bg-light rounded-3 p-3">
                                 <ol class="breadcrumb mb-0">
                                     <li class="breadcrumb-item"><a href="../index.php">Home</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page"><a href="./vistaBicis.php">Bicicletas</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page"><a href="./road.php">Carretera</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page"><a href="./vistaComponentes.php">Componentes</a></li>
                                     <li id="miguitas" class="breadcrumb-item active" aria-current="page"></li>
                                 </ol>
                             </nav>
@@ -131,8 +117,7 @@ $_SESSION['errorCode'] = 0;
                         </div>
                         <div class="d-flex align-items-center mt-4 offers mb-1"><span class="ml-1 font-weight-bold" id="descFinal"></span></div>
                         <hr>
-                        <div class="d-flex align-items-center mt-2"> <label class="radio"> <input type="radio" name="ram" value="128GB" checked> <span>S&nbsp;</span> </label> <label class="radio"> <input type="radio" name="ram" value="256GB"> <span>M&nbsp;</span> </label> <label class="radio"> <input type="radio" name="ram" value="256GB"> <span>L&nbsp;</span> </label> </div>
-                        <div><span class="font-weight-bold">Vendedor: </span><span class="ml-2">Industrias Paloma</span></div>
+                        <div><span class="font-weight-bold">Vendedor: </span><span class="ml-2">Industrias Perico</span></div>
                         <div class="mt-3">
                             <form method="POST" action="../anadirLista.php" style="float: left;">
                                 <input id="numId" name="toCarro" type="hidden" value="">
@@ -164,7 +149,7 @@ $_SESSION['errorCode'] = 0;
     var identificadores = document.querySelectorAll(".IDBase");
     var precios = document.querySelectorAll(".precioBase");
     var productos = document.getElementById("panel");
-    var tarjetas = document.getElementById("categoriasBici");
+    //var tarjetas = document.getElementById("categoriasBici");
     var titulacion = document.getElementById("titulao");
     var migajas = document.getElementById("migotes");
     var formProducto = document.getElementById("ampliarPro");
@@ -173,7 +158,7 @@ $_SESSION['errorCode'] = 0;
             //alert(botones[i].getAttribute('id'));
             productos.classList.add("d-none");
             formProducto.classList.remove("d-none");
-            tarjetas.classList.add("d-none");
+            //tarjetas.classList.add("d-none");
             titulacion.classList.add("d-none");
             migajas.classList.add("d-none");
             document.getElementById("titulo").innerText = botones[i].getAttribute("id");
@@ -189,7 +174,7 @@ $_SESSION['errorCode'] = 0;
         volver.addEventListener("click", function() {
             productos.classList.remove("d-none");
             formProducto.classList.add("d-none");
-            tarjetas.classList.remove("d-none");
+            //tarjetas.classList.remove("d-none");
             titulacion.classList.remove("d-none");
             migajas.classList.remove("d-none");
         });

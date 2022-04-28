@@ -49,7 +49,7 @@
           <a class="nav-link" href="../vistas/vistaBicis.php">Bicis</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Componentes</a>
+          <a class="nav-link" href="../vistas/vistaComponentes.php">Componentes</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Equipación</a>
