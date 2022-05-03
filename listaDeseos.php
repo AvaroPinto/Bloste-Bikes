@@ -105,7 +105,7 @@
                               </button>
                             </form>
                             <form method='POST' action='./anadirLista.php'>
-                            <input id='descId' name='toCarro' type='hidden' value='".$linea['IDProducto']."'>
+                            <input id='descIdt' name='toCarro' type='hidden' value='".$linea['IDProducto']."'>
                               <button type='submit' class='btn btn-danger btn-sm mb-2' data-mdb-toggle='tooltip'
                                 title='Move to the wish list'>
                                 <i class='fas fa-shopping-cart'></i>

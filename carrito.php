@@ -21,8 +21,6 @@
         $totalProductos=$totalProductos+1;
       }
     }
-
-
 ?>
 
 
@@ -171,7 +169,13 @@
               </li>
             </ul>
             <div>
-            <button type="button" class="btn btn-success w-100">Finalizar Pedido</button>
+              <?php 
+                if ($totalProductos==0) {
+                  echo "<a class='btn btn-light w-100' href='./direccionPedido.php' role='button' style='pointer-events: none;'>Finalizar Pedido</a>";
+                }else{
+                  echo "<a class='btn btn-success w-100' href='./direccionPedido.php' role='button'>Finalizar Pedido</a>";
+                }
+              ?>
             </div>
           </div>
         </div>
