@@ -52,10 +52,10 @@
           <a class="nav-link" href="../vistas/vistaComponentes.php">Componentes</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Equipación</a>
+          <a class="nav-link" href="../vistas/vistaEquipacion.php">Equipación</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Quienes Somos</a>
+          <a class="nav-link" href="../aboutUs.php">Quienes Somos</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="../carrito.php"><i class="fas fa-shopping-cart"></i></a>
