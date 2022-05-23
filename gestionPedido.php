@@ -47,5 +47,6 @@
     //hacemos el DELETE de los articulos del carrito para dejarlo vacio y hacemos la redireccion
     mysqli_query($conexion, "DELETE FROM carrito WHERE usuario = '$nombre'");
     header("location: ./perfilUsuario.php");
+    echo $_SESSION['compraCode']=1;
      
 ?>

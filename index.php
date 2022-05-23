@@ -47,7 +47,7 @@ $_SESSION['errorCode'] = 0;
         </div>
       </div>
       <div class="carousel-item">
-        <a href="./vistas/ebike.php"><img src="./images/header2.jpeg" class="d-block w-100 rounded" alt="..."></a>
+        <a href="./vistas/vistaEquipacion.php"><img src="./images/header2.jpeg" class="d-block w-100 rounded" alt="..."></a>
         <div class="carousel-caption d-none d-md-block">
           <h5>Equípate</h5>
           <p>Y llega a lugares que nunca imaginaste.</p>
