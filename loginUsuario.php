@@ -25,7 +25,11 @@ if($registro = mysqli_fetch_array($seleccion)) {
         echo "todo en orden";
         $_SESSION['usuarioRegistrado']=$registro['nombreUsuario'];
         $_SESSION['errorCode']=0;
-        header("location: ../index.php");
+        if ($registro['administrador']==1) {
+            header("location: ../panelAdmin.php");
+        }else{
+            header("location: ../index.php");
+        }
     }else{
         echo "no coinciden las contras";
         $_SESSION['errorCode']=1;
