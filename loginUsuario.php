@@ -26,7 +26,7 @@ if($registro = mysqli_fetch_array($seleccion)) {
         $_SESSION['usuarioRegistrado']=$registro['nombreUsuario'];
         $_SESSION['errorCode']=0;
         if ($registro['administrador']==1) {
-            header("location: ../panelAdmin.php");
+            header("location: ../vistas/adminUser.php");
         }else{
             header("location: ../index.php");
         }
